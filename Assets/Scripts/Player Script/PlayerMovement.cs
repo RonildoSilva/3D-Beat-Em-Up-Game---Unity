@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-	//private PlayerAnimation playerAnimation;
+	private CharacterAnimation playerAnimation;
 
 	private Rigidbody myBody;
 
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 	void Awake() 
 	{
 		myBody = GetComponent<Rigidbody>();
-		//playerAnimation = GetComponentInChildren<PlayerAnimation>();
+		playerAnimation = GetComponentInChildren<CharacterAnimation>();
 	}
 
 	// Start is called before the first frame update
@@ -32,7 +32,8 @@ public class PlayerMovement : MonoBehaviour
 	void Update()
 	{
 		RotatePlayer();
-		print("Value: " + Input.GetAxisRaw(Axis.HORIZONTAL_AXIS));
+		//print("Value: " + Input.GetAxisRaw(Axis.HORIZONTAL_AXIS));
+		AnimatePlayerWalk();
 	}
 
 	void FixedUpdate()
@@ -60,5 +61,15 @@ public class PlayerMovement : MonoBehaviour
 			transform.rotation = Quaternion.Euler(0f, Mathf.Abs(rotationY), 0f);
 		}
 
+	}
+
+	void AnimatePlayerWalk()
+	{
+		if(Input.GetAxisRaw(Axis.HORIZONTAL_AXIS) != 0 || Input.GetAxisRaw(Axis.VERTICAL_AXIS) != 0){
+			playerAnimation.Walk(true);
+		}
+		else{
+			playerAnimation.Walk(false);
+		}
 	}
 }

@@ -6,16 +6,16 @@ public class AnimationTags
 {
     public const string MOVEMENT = "Movement";
 
-    public const string PUNCH_1_TRIGGER = "Punch1";
-    public const string PUNCH_2_TRIGGER = "Punch2";
-    public const string PUNCH_3_TRIGGER = "Punch3"; 
+    public const string PUNCH_1_TRIGGER = "Punch 1";
+    public const string PUNCH_2_TRIGGER = "Punch 2";
+    public const string PUNCH_3_TRIGGER = "Punch 3"; 
 
-    public const string KICK_1_TRIGGER = "Kick1"; 
-    public const string KICK_2_TRIGGER = "Kick2"; 
+    public const string KICK_1_TRIGGER = "Kick 1"; 
+    public const string KICK_2_TRIGGER = "Kick 2"; 
 
-    public const string ATTACK_1_TRIGGER = "Attack1"; 
-    public const string ATTACK_2_TRIGGER = "Attack2"; 
-    public const string ATTACK_3_TRIGGER = "Attack3"; 
+    public const string ATTACK_1_TRIGGER = "Attack 1"; 
+    public const string ATTACK_2_TRIGGER = "Attack 2"; 
+    public const string ATTACK_3_TRIGGER = "Attack 3"; 
 
     public const string IDLE_ANIMATION = "Idle";
 
