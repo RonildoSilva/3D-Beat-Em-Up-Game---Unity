@@ -36,4 +36,37 @@ public class CharacterAnimation : MonoBehaviour
         animator.SetTrigger(AnimationTags.KICK_2_TRIGGER);
     }
 
+    //Enemy Animations
+
+    public void EnemyAttack(int attack){
+        if(attack == 0){
+            animator.SetTrigger(AnimationTags.ATTACK_1_TRIGGER);
+        }
+        if(attack == 1){
+            animator.SetTrigger(AnimationTags.ATTACK_2_TRIGGER);            
+        }
+        if(attack == 2){
+            animator.SetTrigger(AnimationTags.ATTACK_3_TRIGGER);            
+        }
+    }
+
+    public void PlayIdleAnimation(){
+        animator.Play(AnimationTags.IDLE_ANIMATION);
+    }
+
+    public void KnockDown(){
+        animator.SetTrigger(AnimationTags.KNOCK_DOWN_TRIGGER);
+    }
+
+    public void StandUp(){
+        animator.SetTrigger(AnimationTags.STAND_UP_TRIGGER);
+    }
+
+    public void Hit(){
+        animator.SetTrigger(AnimationTags.HIT_TRIGGER);
+    }
+
+    public void Death(){
+        animator.SetTrigger(AnimationTags.DEATH_TRIGGER);
+    }
 }
